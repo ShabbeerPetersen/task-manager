@@ -42,6 +42,14 @@ button {
   padding: 10px 20px;
 }
 
+.task-actions {
+  margin-top: 8px;
+}
+
+.task-actions button {
+  margin-right: 8px;
+}
+
 .task-list ul {
   list-style-type: none;
   padding: 0;

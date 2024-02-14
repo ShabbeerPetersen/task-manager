@@ -35,6 +35,17 @@ function App() {
       }
   };
 
+  const handleUpdateTask = (index) => {
+    // Placeholder for updating tasks (you can implement this based on your needs)
+    console.log(`Update task at index ${index}`);
+};
+
+const handleDeleteTask = (index) => {
+    const updatedTasks = [...tasks];
+    updatedTasks.splice(index, 1);
+    setTasks(updatedTasks);
+};
+
   return (
       <div className="container">
           <h1>Task Management App</h1>
@@ -87,6 +98,10 @@ function App() {
                   {tasks.map((task, index) => (
                       <li key={index}>
                           <strong>{task.taskName}</strong> - Due Date: {task.dueDate}, Priority: {task.priority}
+                          <div className="task-actions">
+                            <button onClick={() => handleUpdateTask(index)}>Update</button>
+                            <button onClick={() => handleDeleteTask(index)}>Delete</button>
+                          </div>
                       </li>
                   ))}
               </ul>
